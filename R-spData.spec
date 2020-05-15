@@ -4,7 +4,7 @@
 #
 Name     : R-spData
 Version  : 0.3.5
-Release  : 32
+Release  : 33
 URL      : https://cran.r-project.org/src/contrib/spData_0.3.5.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/spData_0.3.5.tar.gz
 Summary  : Datasets for Spatial Analysis
@@ -17,31 +17,30 @@ BuildRequires : R-sp
 BuildRequires : buildreq-R
 
 %description
-# spData
-[![Build
-Status](https://travis-ci.org/Nowosad/spData.png?branch=master)](https://travis-ci.org/Nowosad/spData)
-[![CRAN
-version](http://www.r-pkg.org/badges/version/spData)](https://cran.r-project.org/package=spData)
-[![CRAN RStudio mirror
-downloads](http://cranlogs.r-pkg.org/badges/spData)](https://cran.r-project.org/package=spData)
+It includes R data of class sf (defined by the package 'sf'), Spatial ('sp'), and nb ('spdep').
+    Unlike other spatial data packages such as 'rnaturalearth' and 'maps', 
+    it also contains data stored in a range of file formats including GeoJSON, ESRI Shapefile and GeoPackage. 
+    Some of the datasets are designed to illustrate specific analysis techniques.
+    cycle_hire() and cycle_hire_osm(), for example, is designed to illustrate point pattern analysis techniques.
 
 %prep
 %setup -q -c -n spData
+cd %{_builddir}/spData
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1586278114
+export SOURCE_DATE_EPOCH=1589517656
 
 %install
-export SOURCE_DATE_EPOCH=1586278114
+export SOURCE_DATE_EPOCH=1589517656
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib

@@ -4,7 +4,7 @@
 #
 Name     : R-spData
 Version  : 2.2.0
-Release  : 54
+Release  : 55
 URL      : https://cran.r-project.org/src/contrib/spData_2.2.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/spData_2.2.0.tar.gz
 Summary  : Datasets for Spatial Analysis

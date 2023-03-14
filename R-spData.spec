@@ -4,7 +4,7 @@
 #
 Name     : R-spData
 Version  : 2.2.2
-Release  : 57
+Release  : 58
 URL      : https://cran.r-project.org/src/contrib/spData_2.2.2.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/spData_2.2.2.tar.gz
 Summary  : Datasets for Spatial Analysis
@@ -13,9 +13,6 @@ License  : CC0-1.0
 Requires: R-sp
 BuildRequires : R-sp
 BuildRequires : buildreq-R
-# Suppress stripping binaries
-%define __strip /bin/true
-%define debug_package %{nil}
 
 %description
 It includes R data of class sf (defined by the package 'sf'), Spatial ('sp'), and nb ('spdep').
@@ -33,10 +30,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1677689148
+export SOURCE_DATE_EPOCH=1678831273
 
 %install
-export SOURCE_DATE_EPOCH=1677689148
+export SOURCE_DATE_EPOCH=1678831273
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "

@@ -1,5 +1,5 @@
 PKG_NAME := R-spData
-URL = https://cran.r-project.org/src/contrib/spData_2.3.3.tar.gz
+URL = https://ftp.osuosl.org/pub/cran/src/contrib/spData_2.3.4.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
